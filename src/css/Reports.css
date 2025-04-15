@@ -1,0 +1,93 @@
+.admin-reports {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-header h1 {
+    font-size: 24px;
+  }
+  
+  .logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-group label {
+    margin-bottom: 5px;
+  }
+  
+  .filter-group input,
+  .filter-group select {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .generate-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .report-results {
+    margin-top: 20px;
+  }
+  
+  .report-results h2 {
+    margin-bottom: 10px;
+  }
+  
+  .report-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .report-results table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  .report-results th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .export-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
