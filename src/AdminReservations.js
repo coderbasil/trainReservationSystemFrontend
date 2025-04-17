@@ -112,7 +112,7 @@ const AdminReservations = () => {
   return (
     <div className="admin-container">
       <h1>Admin Reservations Management</h1>
-      <div className="reservations-list">
+      <div className="table-container">
         <h2>Reservations</h2>
         <ul>
           {reservations.length > 0 ? (

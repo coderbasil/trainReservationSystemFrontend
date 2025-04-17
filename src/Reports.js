@@ -15,36 +15,60 @@ const Reports = () => {
 
       switch (reportType) {
         case "active_trains_today":
-          query = `${reportType}+${date}`;
+          if (date) {
+            query = `${reportType}+${date}`;
+          } else {
+            alert("Enter a date!");
+          }
           break;
         case "stations_for_each_train":
           query = reportType;
           break;
         case "reservation_by_passengerId":
-          query = `${reportType}+${passengerID}`;
+          if (passengerID) {
+            query = `${reportType}+${passengerID}`;
+          } else {
+            alert("Enter a Passenger ID!");
+          }
           break;
         case "waitlisted_loyalty":
-          query = `${reportType}+${trainNumber}`;
+          if (trainNumber) {
+            query = `${reportType}+${trainNumber}`;
+          } else {
+            alert("Enter a Train Number!");
+          }
           break;
         case "average_load_factor":
-          query = `${reportType}+${date}`;
+          if (date) {
+            query = `${reportType}+${date}`;
+          } else {
+            alert("Enter a date!");
+          }
           break;
         case "dependents_list":
-          query = `${reportType}+${date}`;
+          if (date) {
+            query = `${reportType}+${date}`;
+          } else {
+            alert("Enter a date!");
+          }
           break;
         default:
           setError("Please select a valid report type.");
           return;
       }
 
-      const response = await fetch(`http://localhost:5000/reports/${query}`);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch the report. Status: ${response.status}`);
-      }
+      if (query != "") {
+        const response = await fetch(`http://localhost:5000/reports/${query}`);
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch the report. Status: ${response.status}`
+          );
+        }
 
-      const data = await response.json();
-      setReportData(data);
-      setError("");
+        const data = await response.json();
+        setReportData(data);
+        setError("");
+      }
     } catch (error) {
       console.error("Error fetching report:", error);
       setError("Failed to fetch report data. Please try again.");
